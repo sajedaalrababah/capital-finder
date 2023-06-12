@@ -18,7 +18,7 @@ class handler(BaseHTTPRequestHandler):
                 url = f"https://restcountries.com/v3.1/capital/{capitalName}"
                 res = requests.get(url)
                 data = res.json()
-                countryName = data[0]["name"]['common']
+                countryName = data["name"]['common']
                 result = f'{capitalName} is the capital city of {countryName}.'  
 
             except:
