@@ -15,7 +15,7 @@ class handler(BaseHTTPRequestHandler):
 
         if countryName:
             try:
-                url = f"https://restcountries.com/v3.1/name/{countryName}?fullText=true"
+                url = f"https://restcountries.com/v3.1/name/{countryName}"
                 res = requests.get(url)
                 data = res.json()
                 capitalName = data[0]["capital"][0]
